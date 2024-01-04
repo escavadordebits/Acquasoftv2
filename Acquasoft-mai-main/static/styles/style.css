@@ -1,0 +1,163 @@
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=button] {
+  background-color: #c8c8c8;
+  color: white;
+  padding: 20px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+button[type=button]:hover {
+  background-color: #7c7e7c;
+}
+
+button[type=submit] {
+  background-color: #c8c8c8;
+  color: white;
+  padding: 6px 7px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #676b67;
+}
+
+.header {
+  
+  padding: 80px;
+  background-image:url("images/banner.jpg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  background-size: contain;
+  display: flex;
+
+}
+.bar {
+  flex: 1;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: silver;
+  color: white;
+  font-size: 10px;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 50px;
+  
+}
+.containerbar {
+  height: 30px;
+  background-color: #CCC;
+  position: relative;
+}
+
+.containerbar .progress-bar{
+  position: absolute;
+  height: 100%;
+  background-color: #0fd439;
+  animation: progress-animation 20s none ;
+}
+@keyframes progress-animation{
+   0% { width: 0%; } 
+   100% { width: 100%}
+}
+
+
+.col-25 {
+  float: left;
+  width: 50%;
+  margin-top: 20%;
+}
+
+.col-75 {
+  float: left;
+  width: 50%;
+  margin-top: 8px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+#logo-container img {
+  width: 100%;
+  height: auto;
+}
+.header-right {
+  float: right;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+  .col-25,
+  .col-75,
+  input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
