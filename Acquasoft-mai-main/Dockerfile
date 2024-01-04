@@ -1,8 +1,8 @@
 # Define a imagem base
-FROM python:3.9
+FROM python:3.8
 
 # Define o diretório de trabalho dentro do container
-WORKDIR /app
+WORKDIR /Acquasoft-mai-main
 
 # Copia os arquivos de requisitos para o diretório de trabalho
 COPY requirements.txt .
